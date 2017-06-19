@@ -8,10 +8,12 @@
   "contributors": [
     "Andrew Smith <andrew.codes>"
   ],
+  "webpack/web/entry": "src/client/index.js",
+  "webpack/web/output": "dist/client/index.js",
   "webpack/entry": "src/webServer/index.js",
   "webpack/output": "dist/index.js",
   "scripts": {
-    "prepublish": "{ cd ../../; yarn run prepublish/single @rdhariwal/fpm-server; };",
+    "prepublish": "{ cd ../../; yarn run prepublish/single @rdhariwal/fpm-server; yarn run prepublish/single @rdhariwal/fpm-server production.web; };",
     "test": "{ cd ../../; yarn run test/single @rdhariwal/fpm-server; };"
   },
   "license": "ISC",
